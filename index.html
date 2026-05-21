@@ -41,9 +41,6 @@ header{
     width:180px;
     height:180px;
     margin-bottom:30px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
 .cruz-malta img{
@@ -77,11 +74,6 @@ header{
     text-decoration:none;
     font-weight:700;
     border-radius:8px;
-    transition:0.3s;
-}
-
-.hero-btn:hover{
-    background:#f0ca56;
 }
 
 nav{
@@ -161,13 +153,15 @@ section{
 
 .foto{
     height:230px;
-    background:linear-gradient(135deg,#bdbdbd,#e4e4e4);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#666;
-    font-weight:700;
-    font-size:1.2rem;
+    overflow:hidden;
+    background:#fff;
+}
+
+.foto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .info{
@@ -185,7 +179,6 @@ section{
     color:#555;
     line-height:1.7;
     margin-bottom:20px;
-    min-height:80px;
 }
 
 .botao{
@@ -198,10 +191,6 @@ section{
     font-weight:700;
 }
 
-.botao:hover{
-    background:#1ca850;
-}
-
 .contato{
     background:white;
     padding:60px;
@@ -210,11 +199,6 @@ section{
     max-width:900px;
     margin:auto;
     box-shadow:0 12px 30px rgba(0,0,0,0.12);
-}
-
-.contato p{
-    margin-bottom:18px;
-    font-size:1.1rem;
 }
 
 footer{
@@ -248,49 +232,24 @@ footer{
 }
 
 @media(max-width:768px){
-    .hero h1{
-        font-size:3.2rem;
-    }
-
-    .produtos-grid{
-        grid-template-columns:1fr;
-    }
-
-    .titulo h2{
-        font-size:2.4rem;
-    }
-
-    nav{
-        gap:20px;
-        flex-wrap:wrap;
-    }
-
-    .cruz-malta{
-        width:130px;
-        height:130px;
-    }
+    .hero h1{ font-size:3.2rem; }
+    .produtos-grid{ grid-template-columns:1fr; }
+    .titulo h2{ font-size:2.4rem; }
+    nav{ gap:20px; flex-wrap:wrap; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="hero">
-
 <div class="cruz-malta">
-    <img src="6.jpg" alt="Cruz de Malta">
+    <img src="root/6.jpg" alt="Logo Arsenal">
 </div>
 
 <h1>ARSENAL C&W</h1>
-
-<p>
-Tecnologia, precisão e acabamento premium
-em carregadores e componentes metálicos.
-</p>
-
+<p>Tecnologia, precisão e acabamento premium em carregadores e componentes metálicos.</p>
 <a href="https://wa.me/5513996421993" class="hero-btn">FALE CONOSCO</a>
-
 </div>
 </header>
 
@@ -308,10 +267,8 @@ em carregadores e componentes metálicos.
 </div>
 
 <div class="sobre">
-A Arsenal C&W atua no segmento de carregadores e componentes metálicos,
-unindo acabamento premium, resistência e mecânica de precisão.
-Inspirada em fabricantes internacionais, a empresa busca oferecer
-qualidade visual, tecnologia e apresentação moderna.
+A Arsenal C&W atua no segmento de componentes metálicos com acabamento premium,
+resistência e precisão mecânica.
 </div>
 </section>
 
@@ -322,14 +279,23 @@ qualidade visual, tecnologia e apresentação moderna.
 </div>
 
 <div class="produtos-grid">
-    <div class="produto"><div class="foto">FOTO 1</div><div class="info"><h3>Carregador 1</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 2</div><div class="info"><h3>Carregador 2</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 3</div><div class="info"><h3>Carregador 3</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 4</div><div class="info"><h3>Carregador 4</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 5</div><div class="info"><h3>Carregador 5</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 6</div><div class="info"><h3>Carregador 6</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 7</div><div class="info"><h3>Carregador 7</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 8</div><div class="info"><h3>Carregador 8</h3><p>Alta resistência e acabamento premium.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/1.jpg"></div><div class="info"><h3>Carregador 1</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/2.jpg"></div><div class="info"><h3>Carregador 2</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/3.jpg"></div><div class="info"><h3>Carregador 3</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/4.jpg"></div><div class="info"><h3>Carregador 4</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/5.jpg"></div><div class="info"><h3>Carregador 5</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/6.jpg"></div><div class="info"><h3>Carregador 6</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/7.jpg"></div><div class="info"><h3>Carregador 7</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/8.jpg"></div><div class="info"><h3>Carregador 8</h3><p>Alta resistência.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
 </div>
 </section>
 
@@ -340,14 +306,16 @@ qualidade visual, tecnologia e apresentação moderna.
 </div>
 
 <div class="produtos-grid">
-    <div class="produto"><div class="foto">FOTO 1</div><div class="info"><h3>Mola 1</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 2</div><div class="info"><h3>Mola 2</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 3</div><div class="info"><h3>Mola 3</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 4</div><div class="info"><h3>Mola 4</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 5</div><div class="info"><h3>Mola 5</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 6</div><div class="info"><h3>Mola 6</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 7</div><div class="info"><h3>Mola 7</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
-    <div class="produto"><div class="foto">FOTO 8</div><div class="info"><h3>Mola 8</h3><p>Precisão e desempenho mecânico premium.</p><a href="#" class="botao">WhatsApp</a></div></div>
+
+<div class="produto"><div class="foto"><img src="root/m1.jpg"></div><div class="info"><h3>Mola 1</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+<div class="produto"><div class="foto"><img src="root/m2.jpg"></div><div class="info"><h3>Mola 2</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+<div class="produto"><div class="foto"><img src="root/m3.jpg"></div><div class="info"><h3>Mola 3</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+<div class="produto"><div class="foto"><img src="root/m4.jpg"></div><div class="info"><h3>Mola 4</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+<div class="produto"><div class="foto"><img src="root/m5.jpg"></div><div class="info"><h3>Mola 5</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+<div class="produto"><div class="foto"><img src="root/m6.jpg"></div><div class="info"><h3>Mola 6</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+<div class="produto"><div class="foto"><img src="root/m7.jpg"></div><div class="info"><h3>Mola 7</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+<div class="produto"><div class="foto"><img src="root/m8.jpg"></div><div class="info"><h3>Mola 8</h3><p>Precisão mecânica.</p><a href="https://wa.me/5513996421993" class="botao">WhatsApp</a></div></div>
+
 </div>
 </section>
 
