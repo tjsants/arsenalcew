@@ -1,896 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ARSENAL C&W</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#f4d2a1;
-    font-family:'Poppins',sans-serif;
-    color:#222;
-}
-
-header{
-    min-height:65vh;
-    background:
-    linear-gradient(rgba(80,0,0,0.78),rgba(40,0,0,0.88)),
-    #5c0000;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:40px;
-    text-align:center;
-}
-
-.hero{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.cruz-malta{
-    width:180px;
-    height:180px;
-    margin-bottom:30px;
-}
-
-.cruz-malta img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    filter:drop-shadow(0 8px 20px rgba(0,0,0,.35));
-}
-
-.hero h1{
-    color:white;
-    font-size:6rem;
-    line-height:.95;
-    font-family:'Cinzel',serif;
-    margin-bottom:25px;
-    letter-spacing:6px;
-}
-
-.hero p{
-    color:#f5d7b5;
-    font-size:1.4rem;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
-.hero-btn{
-    display:inline-block;
-    padding:18px 40px;
-    background:#d4af37;
-    color:#3b0000;
-    text-decoration:none;
-    font-weight:700;
-    border-radius:8px;
-}
-
-nav{
-    background:#3f0000;
-    padding:22px;
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    position:sticky;
-    top:0;
-    z-index:999;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-}
-
-nav a:hover{
-    color:#d4af37;
-}
-
-section{
-    max-width:1500px;
-    margin:auto;
-    padding:100px 30px;
-}
-
-.titulo{
-    text-align:center;
-    margin-bottom:70px;
-}
-
-.titulo h2{
-    font-size:4rem;
-    color:#5c0000;
-    font-family:'Cinzel',serif;
-    margin-bottom:20px;
-}
-
-.titulo span{
-    width:120px;
-    height:5px;
-    background:#a00000;
-    display:block;
-    margin:auto;
-    border-radius:10px;
-}
-
-.sobre{
-    max-width:1100px;
-    margin:auto;
-    text-align:center;
-    line-height:2;
-    font-size:1.2rem;
-    color:#444;
-}
-
-.produtos-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-}
-
-.produto{
-    background:white;
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-    transition:.3s;
-}
-
-.produto:hover{
-    transform:translateY(-8px);
-}
-
-.foto{
-    height:230px;
-    overflow:hidden;
-    background:#fff;
-}
-
-.foto img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.info{
-    padding:25px;
-    text-align:center;
-}
-
-.info h3{
-    font-size:1.3rem;
-    color:#3f0000;
-    margin-bottom:12px;
-}
-
-.info p{
-    color:#555;
-    line-height:1.7;
-    margin-bottom:20px;
-}
-
-.botao{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:12px 24px;
-    border-radius:40px;
-    font-weight:700;
-}
-
-.contato{
-    background:white;
-    padding:60px;
-    border-radius:25px;
-    text-align:center;
-    max-width:900px;
-    margin:auto;
-}
-
-footer{
-    background:#3f0000;
-    color:white;
-    text-align:center;
-    padding:45px 20px;
-}
-
-.whatsapp{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:75px;
-    height:75px;
-    background:#25D366;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.whatsapp img{
-    width:38px;
-}
-
-@media(max-width:1100px){
-.produtos-grid{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:768px){
-.hero h1{
-font-size:3.2rem;
-}
-
-.produtos-grid{
-grid-template-columns:1fr;
-}
-
-.titulo h2{
-font-size:2.4rem;
-}
-
-nav{
-gap:20px;
-flex-wrap:wrap;
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARSENAL C&W - Componentes Premium</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f8f8; }
+        
+        header {
+            background: #111;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x600') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        section { padding: 100px 0; }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #111;
+        }
+        
+        .about { background: white; }
+        
+        .products { background: #f8f8f8; }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #111;
+        }
+        
+        .product-detail {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+            color: #444;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #111;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #ffd700;
+            color: #111;
+        }
+        
+        .contact {
+            background: #111;
+            color: white;
+        }
+        
+        footer {
+            background: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<div class="hero">
-
-<div class="cruz-malta">
-<img src="root/logo arsenal.jpg" alt="Logo Arsenal">
-</div>
-
-<h1>ARSENAL C&W</h1>
-
-<p>
-Tecnologia, precisão e acabamento premium em carregadores e componentes metálicos.
-</p>
-
-<a href="https://wa.me/5513996421993" class="hero-btn" target="_blank">
-FALE CONOSCO
-</a>
-
-</div>
-
-</header>
-
-
-<nav>
-
-<a href="#sobre">SOBRE</a>
-<a href="#carregadores">CARREGADORES</a>
-<a href="#componentes">COMPONENTES</a>
-<a href="#molas">MOLAS</a>
-<a href="#contato">CONTATO</a>
-
-</nav>
-<section id="sobre">
-
-<div class="titulo">
-<h2>SOBRE NÓS</h2>
-<span></span>
-</div>
-
-<div class="sobre">
-
-A ARSENAL C&W atua no desenvolvimento e fabricação de componentes metálicos,
-com foco em precisão mecânica, acabamento premium e qualidade para colecionadores
-e profissionais que buscam peças de alto padrão.
-
-</div>
-
-</section>
-
-
-
-<section id="carregadores">
-
-<div class="titulo">
-<h2>CARREGADORES</h2>
-<span></span>
-</div>
-
-
-<div class="produtos-grid">
-
-
-<div class="produto">
-
-<div class="foto">
-<img src="root/carregador luger parabelum .jpg">
-</div>
-
-<div class="info">
-
-<h3>Carregador Pistola Luger P08 Parabellum</h3>
-
-<p>
-Capacidade para 8 cartuchos.
-Acabamento niquelado.
-Produzido com precisão e excelente acabamento.
-Marca Arsenal.
-</p>
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse no Carregador Pistola Luger P08 Parabellum capacidade 8 cartuchos niquelado"
-target="_blank">
-COMPRAR
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="produto">
-
-<div class="foto">
-<img src="root/Carregador de Pistola SIG Sauer 38.jpg">
-</div>
-
-<div class="info">
-
-<h3>Carregador Pistola SIG Sauer .38</h3>
-
-<p>
-Capacidade para 12 cartuchos.
-Acabamento oxidado preto.
-Peça fabricada para alto desempenho e durabilidade.
-Marca SIG Sauer.
-</p>
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse no Carregador Pistola SIG Sauer .38 capacidade 12 cartuchos"
-target="_blank">
-COMPRAR
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-<section id="componentes">
-
-
-<div class="titulo">
-
-<h2>COMPONENTES LUGER P08</h2>
-
-<span></span>
-
-</div>
-
-
-<div class="produtos-grid">
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/luger p08 tampa lateral .jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Luger P08 Tampa Lateral Completa</h3>
-
-<p>
-Tampa do gatilho completa com travas
-(Trigger Sideplate).
-Acabamento oxidado preto.
-Material metal e latão.
-Marca Arsenal.
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Tampa Lateral Luger P08 completa"
-target="_blank">
-COMPRAR
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/luger p08 agulha guia e mola.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Luger P08 9mm - Agulha Guia e Mola</h3>
-
-
-<p>
-
-Conjunto composto por agulha,
-mola e guia da mola.
-Acabamento oxidado preto.
-Material aço.
-Marca Arsenal.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse no conjunto Agulha Guia e Mola Luger P08 9mm"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/gatilho.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Gatilho Luger P08</h3>
-
-
-<p>
-
-Componente metálico com acabamento
-de alta precisão para reposição.
-Construção resistente e acabamento premium.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse no Gatilho Luger P08"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-</div>
-
-</section>
-<section id="molas">
-
-
-<div class="titulo">
-
-<h2>MOLAS E COMPONENTES</h2>
-
-<span></span>
-
-</div>
-
-
-<div class="produtos-grid">
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/mola do carregador luger pistola luger p08.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Mola Carregador Pistola Luger P08</h3>
-
-<p>
-
-Mola para carregador da pistola Luger P08.
-Calibre 9mm.
-Acabamento oxidado.
-Tratamento térmico especial com têmpera e revenido.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carregador Pistola Luger P08"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/mola carregador da pistola fn 1910.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Mola Carregador Pistola FN 1910</h3>
-
-<p>
-
-Mola para carregador da pistola FN 1910.
-Calibre 7.65mm.
-Acabamento oxidado.
-Tratamento térmico especial.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carregador Pistola FN 1910"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/mola carabina sz .22lr.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Mola Carabina SZ .22 LR</h3>
-
-<p>
-
-Mola de carregador para carabina SZ.
-Calibre .22 LR.
-Acabamento oxidado preto.
-Tratamento térmico especial.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carabina SZ .22 LR"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/mola carabina cz .22 lr 5 cartuchos .jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Mola Carabina CZ .22 LR</h3>
-
-<p>
-
-Mola para carregador de carabina CZ.
-Calibre .22 LR.
-Capacidade 5 cartuchos.
-Acabamento oxidado preto.
-Temperada e revenida.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carabina CZ .22 LR 5 cartuchos"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/mola 18 preta.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Mola Especial 18 Preta</h3>
-
-<p>
-
-Componente fabricado com tratamento térmico.
-Acabamento preto.
-Alta resistência mecânica.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola 18 Preta"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/mola 15.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Mola Especial 15</h3>
-
-<p>
-
-Peça metálica de alta resistência.
-Produzida com tratamento térmico
-para maior durabilidade.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola 15"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="produto">
-
-<div class="foto">
-
-<img src="root/colt 1911 mola 14.jpg">
-
-</div>
-
-
-<div class="info">
-
-<h3>Mola Carregador Colt 1911 e Clones</h3>
-
-<p>
-
-Calibre .45.
-Capacidade para 8 cartuchos.
-Pintura especial.
-Tratamento térmico.
-Regulagem de 6 libras até 18 libras.
-
-</p>
-
-
-<a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carregador Colt 1911 calibre .45"
-target="_blank">
-
-COMPRAR
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section id="contato">
-
-
-<div class="titulo">
-
-<h2>CONTATO</h2>
-
-<span></span>
-
-</div>
-
-
-
-<div class="contato">
-
-
-<p>
-<strong>Telefone:</strong> (13) 99642-1993
-</p>
-
-
-<p>
-<strong>Email:</strong> thomasparreira123@gmail.com
-</p>
-
-
-<p>
-<strong>Vendedor:</strong> Thomas Hager
-</p>
-
-
-<p>
-<strong>Endereço:</strong> Av. Rodrigues Alves, 177
-</p>
-
-
-<p>
-Santos - SP • CEP 11015-201
-</p>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<footer>
-
-© 2026 ARSENAL C&W
-
-</footer>
-
-
-
-
-
-<a href="https://wa.me/5513996421993" class="whatsapp" target="_blank">
-
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-
-</a>
-
-
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ARSENAL C&W</div>
+                <div class="nav-links">
+                    <a href="#sobre">Sobre Nós</a>
+                    <a href="#carregadores">Carregadores</a>
+                    <a href="#luger">Luger P08</a>
+                    <a href="#molas">Molas</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tecnologia, Precisão e Acabamento Premium</h1>
+            <p style="font-size:1.4rem; margin-bottom:30px;">Carregadores e componentes metálicos de alto padrão</p>
+            <a href="#contato" class="btn">FALE CONOSCO</a>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p style="max-width:900px; margin:0 auto; text-align:center; font-size:1.2rem;">
+                A <strong>ARSENAL C&W</strong> atua no desenvolvimento e fabricação de componentes metálicos, com foco em 
+                <strong>precisão mecânica</strong>, <strong>acabamento premium</strong> e qualidade para colecionadores 
+                e profissionais que buscam peças de alto padrão.
+            </p>
+        </div>
+    </section>
+
+    <!-- CARREGADORES -->
+    <section id="carregadores" class="products">
+        <div class="container">
+            <h2>Carregadores</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Carregador Pistola Luger P08 Parabellum</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Niquelado</p>
+                        <p class="product-detail"><span class="detail-label">Capacidade:</span> 8 cartuchos</p>
+                        <p class="product-detail"><span class="detail-label">Calibre:</span> 9mm</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Marca:</span> Arsenal</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Carregador Pistola SIG Sauer .38</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado preto</p>
+                        <p class="product-detail"><span class="detail-label">Capacidade:</span> 12 cartuchos</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Marca:</span> SIG Sauer</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPONENTES LUGER -->
+    <section id="luger" class="products" style="background:white;">
+        <div class="container">
+            <h2>Componentes Luger P08</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Luger P08 Tampa Lateral Completa</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado preto</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Metal e latão</p>
+                        <p class="product-detail"><span class="detail-label">Descrição:</span> Tampa do gatilho completa com travas (Trigger Sideplate)</p>
+                        <p class="product-detail"><span class="detail-label">Marca:</span> Arsenal</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Luger P08 9mm - Agulha Guia e Mola</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado preto</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Descrição:</span> Conjunto composto por agulha, mola e guia da mola</p>
+                        <p class="product-detail"><span class="detail-label">Marca:</span> Arsenal</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Gatilho Luger P08</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Premium</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Descrição:</span> Componente metálico com acabamento de alta precisão para reposição</p>
+                        <p class="product-detail"><span class="detail-label">Marca:</span> Arsenal</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MOLAS -->
+    <section id="molas" class="products">
+        <div class="container">
+            <h2>Molas e Componentes</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Mola Carregador Pistola Luger P08</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado</p>
+                        <p class="product-detail"><span class="detail-label">Calibre:</span> 9mm</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Tratamento:</span> Térmico especial (têmpera e revenido)</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Mola Carregador Pistola FN 1910</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado</p>
+                        <p class="product-detail"><span class="detail-label">Calibre:</span> 7.65mm</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Tratamento:</span> Térmico especial</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Mola Carabina SZ .22 LR</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado preto</p>
+                        <p class="product-detail"><span class="detail-label">Calibre:</span> .22 LR</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Tratamento:</span> Térmico especial</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Mola Carabina CZ .22 LR</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado preto</p>
+                        <p class="product-detail"><span class="detail-label">Calibre:</span> .22 LR</p>
+                        <p class="product-detail"><span class="detail-label">Capacidade:</span> 5 cartuchos</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Tratamento:</span> Temperada e revenida</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Mola Especial 18 Preta</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Preto</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Tratamento:</span> Térmico</p>
+                        <p class="product-detail"><span class="detail-label">Característica:</span> Alta resistência mecânica</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Mola Especial 15</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Oxidado</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Tratamento:</span> Térmico</p>
+                        <p class="product-detail"><span class="detail-label">Característica:</span> Alta resistência</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">Mola Carregador Colt 1911 e Clones</div>
+                        <p class="product-detail"><span class="detail-label">Acabamento:</span> Pintura especial</p>
+                        <p class="product-detail"><span class="detail-label">Calibre:</span> .45</p>
+                        <p class="product-detail"><span class="detail-label">Capacidade:</span> 8 cartuchos</p>
+                        <p class="product-detail"><span class="detail-label">Material:</span> Aço</p>
+                        <p class="product-detail"><span class="detail-label">Tratamento:</span> Térmico</p>
+                        <p class="product-detail"><span class="detail-label">Regulagem:</span> 6 a 18 libras</p>
+                        <a href="#" class="btn">COMPRAR</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 style="color:white;">Contato</h2>
+            <p style="text-align:center; font-size:1.3rem; max-width:700px; margin:0 auto 40px;">
+                <strong>Vendedor:</strong> Thomas Hager
+            </p>
+            <p style="text-align:center; font-size:1.2rem;">
+                📞 (13) 99642-1993<br>
+                ✉️ thomasparreira123@gmail.com<br><br>
+                📍 Av. Rodrigues Alves, 177<br>
+                Santos - SP • CEP 11015-201
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            &copy; 2026 ARSENAL C&W - Todos os direitos reservados
+        </div>
+    </footer>
 
 </body>
-
 </html>
