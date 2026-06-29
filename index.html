@@ -668,11 +668,11 @@ COMPRAR
 
 <div class="info">
 
-<h3>Mola Da Carabina CZ .22 LR</h3>
+<h3>Mola Carabina SZ .22 LR - 10 Cartuchos</h3>
 
 <p>
 <p>Mola de carregador para carabina SZ.</p>
-<p>Capacidade: 10 cartuchos</p>
+<p>Capacidade: 10 cartuchos.</p>
 <p>Calibre: .22 LR.</p>
 <p>Acabamento: oxidado preto.</p>
 <p>Tratamento térmico: especial.</p>
@@ -680,7 +680,46 @@ COMPRAR
 
 
 <a class="botao"
-href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carabina SZ .22 LR"
+href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carabina SZ .22 LR 10 cartuchos"
+target="_blank">
+
+COMPRAR
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="produto">
+
+<div class="foto">
+
+<img src="root/carabina22nova.jpg">
+
+</div>
+
+
+<div class="info">
+
+<h3>Mola Carregador Carabina CZ .22 LR - 10 Cartuchos</h3>
+
+<p>
+<p>Mola para carregador de carabina CZ.</p>
+<p>Capacidade: 10 cartuchos.</p>
+<p>Calibre: .22 LR.</p>
+<p>Acabamento: oxidado preto.</p>
+<p>Tratamento térmico: especial.</p>
+</p>
+
+
+<a class="botao"
+href="https://wa.me/5513996421993?text=Tenho interesse na Mola Carregador Carabina CZ .22 LR 10 cartuchos"
 target="_blank">
 
 COMPRAR
@@ -707,7 +746,7 @@ COMPRAR
 
 <div class="info">
 
-<h3>Mola Da Carabina CZ .22 LR</h3>
+<h3>Mola Carabina CZ .22 LR - 5 Cartuchos</h3>
 
 <p>
 <p>Mola para carregador de carabina CZ.</p>
@@ -783,10 +822,10 @@ COMPRAR
 
 <div class="info">
 
-<h3>Mola recuperadode ferrolho - 15 libras</h3>
+<h3>Mola Recuperadora de Ferrolho - 15 Libras</h3>
 
 <p>
-<p>material: Aço .</p>
+<p>Material: Aço.</p>
 <p>Produzida com tratamento térmico para maior durabilidade.</p>
 </p>
 
@@ -899,6 +938,26 @@ Santos - SP • CEP 11015-201
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 
 </a>
+
+<!-- Script para forçar a reprodução dos vídeos -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona todos os vídeos na página
+    const videos = document.querySelectorAll('video');
+    
+    videos.forEach(function(video) {
+        // Tenta reproduzir o vídeo
+        video.play().catch(function(error) {
+            console.log('Reprodução automática bloqueada, tentando novamente...');
+            // Se falhar, tenta novamente após interação do usuário
+            document.addEventListener('click', function playVideo() {
+                video.play();
+                document.removeEventListener('click', playVideo);
+            }, { once: true });
+        });
+    });
+});
+</script>
 
 </body>
 
